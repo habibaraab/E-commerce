@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    background-color: #f4f7f6;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Headings */
+h2 {
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.form-control {
+    border: 2px solid #dfe6e9;
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #6F73D2;
+    border: none;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #c8c9e2;
+    color: #000;
+}
+
+.btn:active,
+.btn:focus,
+.btn:active:focus {
+    background-color: #c8c9e2 !important;
+    color: #000 !important;
+    outline: none;
+    box-shadow: none;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{#if isEdit}}Update Product{{else}}Add Product{{/if}}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4 text-center">{{#if isEdit}}Update Product{{else}}Add New Product{{/if}}</h2>
+    {{#if errors}}
+      <div class="alert alert-danger" role="alert">
+        Please fix the following errors:
+        <ul>
+          {{#each errors}}
+            <li>{{this.msg}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+    <form method="POST" action="{{#if isEdit}}/admin/products/{{product._id}}/update{{else}}/admin/products{{/if}}">
+      <div class="mb-3">
+        <label for="title" class="form-label">Product Title</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{product.title}}" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3" required>{{product.description}}</textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input type="text" class="form-control" id="category" name="category" value="{{product.category}}" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Price (EGP)</label>
+       <input type="number" step="any" class="form-control" id="price" name="price" value="{{product.price}}" required>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Image URL</label>
+        <input type="text" class="form-control" id="image" name="image" value="{{product.image}}">
+      </div>
+
+      <div class="mb-3">
+        <label for="discount" class="form-label">Discount (%)</label>
+        <input type="number" class="form-control" id="discount" name="discount" value="{{product.discount}}" min="0" max="100">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-success">{{#if isEdit}}Update Product{{else}}Add Product{{/if}}</button>
+        <a href="/admin" class="btn btn-secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html> 
+
+ 

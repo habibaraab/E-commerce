@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calculateNewPrice with negative price should return "0.00" when price is negative 1`] = `"Price cannot be negative"`;
+
+exports[`showDiscount should throw matching error snapshot 1`] = `"getDiscountAmount is not defined"`;
