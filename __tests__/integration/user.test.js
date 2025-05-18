@@ -41,8 +41,7 @@ describe('User Routes', () => {
         isTest: true,
       });
 
-    expect(userRes.status).toBe(302); // ملاحظة: 400 معناها إن في فشل، هل ده متعمد؟
-
+    expect(userRes.status).toBe(302);
     await productModel.create({
       title: 'Test Product',
       image: 'uploads/test.jpg',
@@ -57,3 +56,4 @@ describe('User Routes', () => {
     expect(res.text).toContain('/auth/login');
   });
 });
+

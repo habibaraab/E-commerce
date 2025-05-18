@@ -15,8 +15,6 @@ const validateLogin = require('../middlewares/validators/validateLogin');
 const router = express.Router();
 
 
-router.post('/login', validateLogin, login);
-
 
 router.get('/login', renderLogin);
 router.get('/signup', renderSignup);

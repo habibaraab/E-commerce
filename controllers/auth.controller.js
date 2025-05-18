@@ -77,7 +77,7 @@ const login = async (req, res) => {
 
     req.session.user = user;
 
-    if (user.isAdmin === 'true' || user.isAdmin === true) {
+    if (user.isAdmin === true) {
         res.redirect("/admin");
     } else {
         res.redirect("/user");
